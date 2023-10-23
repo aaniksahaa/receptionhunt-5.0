@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/leaderboard.css')}}">
+    <title>Leaderboard</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/leaderboard" align="left" style="margin-top: 10px; margin-left: 10px; font-size:30px" class="btn btn-light"><b>Leaderboard</b></a>
+            <a href="/puzzle" align="left" style="margin-top: 10px; margin-left: 10px; font-size:30px" class="btn btn-light"><b>Puzzle</b></a>
+            <a href="/logout" align="right" style="margin-top: 10px; margin-right: 10px; float: right; font-size:30px" class="btn btn-danger"><b>Logout</b></a>
+        </nav>
+    </header>
+
+    <div align="center">
+        <br>
+        <h2>Current Standings</h2>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Team Name</th>
+                    <th>Puzzles Completed</th>
+                    <th>Time Completed</th>
+                </tr>
+            </thead>
+            {%for user in user_list%}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.level_completed}}</td>
+                <td>{{user.last_time}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+</body>
+
+</html>
