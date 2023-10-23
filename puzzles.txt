@@ -1,6 +1,6 @@
 ID	Image	Answer
 A	https://i.postimg.cc/8CJrB3ph/A.png	google
-B	https://i.postimg.cc/L69Y0h44/B.png	hahavodox
+B	https://i.postimg.cc/L69Y0h44/B.png	haha
 C	https://i.postimg.cc/CL7DFkrf/C.png	20,twenty
 D	https://i.postimg.cc/YCncRYxW/D.png	towerofhanoi
 E	https://i.postimg.cc/qvMV2j2r/E.png	eeeissedness
