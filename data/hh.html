@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/puzzle.css')}}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/leaderboard" align="left" style="margin-top: 10px; margin-left: 20px; font-size:30px" class="btn btn-dark"><b>Leaderboard</b></a>
+            <a href="/puzzle" align="left" style="margin-top: 10px; margin-left: 20px; font-size:30px" class="btn btn-light"><b>Puzzle</b></a>
+            <a href="/logout" align="right" style="margin-top: 10px; margin-right: 20px; float:right; font-size:30px" class="btn btn-danger"><b>Logout</b></a>
+        </nav>
+    </header>
+
+    <div class="puzzle-container">
+        <br>
+        <h2>Current Level : 3</h2>
+        <br><br>
+        <div class="image-container">
+            <img src="https://postimg.cc/TpmVYwsr" />
+        </div>
+        <br>
+        <form action="/puzzle" method="POST">
+            <div class="form-container">
+                <div class="textbox">
+                    <input type="text" name="answer" placeholder="Enter your answer here">
+                </div>
+                <div>
+                    <input class="button" type="submit" title="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
